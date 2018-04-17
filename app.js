@@ -38,6 +38,9 @@ app.use('/users', users);
 //index route
 app.get('/', (req, res) => {
     res.send('Invalid end point');
+});
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'public/index.html'));
 })
 
 //server running on port 3000
